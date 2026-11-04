@@ -1,5 +1,6 @@
 export const COLORS = {
   // Pure Colors (100% Opacity)
+  white: '#FFFFFF',
   boneWhite: '#F4EFE8',
   stoneGray: '#B1B9B0',
   stoneGreen: '#9BA99F',

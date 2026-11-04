@@ -1,7 +1,7 @@
 import { Pressable, Text, StyleSheet } from 'react-native';
 import React from 'react';
 import { COLORS } from '../colors';
-import { ArrowIcon } from '../assets/images';
+import { ArrowIcon, MoonIcon } from '../assets/images';
 
 interface ButtonProps {
   title: string;
@@ -9,6 +9,7 @@ interface ButtonProps {
   disabled?: boolean;
   style?: object;
   icon: 'arrow' | 'moon';
+  textStyle?: object;
 }
 
 const Button = (props: ButtonProps) => {
@@ -18,9 +19,9 @@ const Button = (props: ButtonProps) => {
       onPress={props.onPress}
       disabled={props.disabled}
     >
-      {props.icon === 'moon' && <Text>🌙</Text>}
+      {props.icon === 'moon' && <MoonIcon size={17} color={COLORS.boneWhite} />}
 
-      <Text style={styles.buttonText}>{props.title}</Text>
+      <Text style={[styles.buttonText, props.textStyle]}>{props.title}</Text>
       {props.icon === 'arrow' && <ArrowIcon />}
     </Pressable>
   );
